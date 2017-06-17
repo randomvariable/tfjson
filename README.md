@@ -19,6 +19,10 @@ $ go get github.com/palantir/tfjson
 ```
 GOOS=linux GOARCH=amd64 go build -v tfjson.go
 ```
+### For mac:
+```
+GOOS=darwin GOARCH=amd64 go build -v tfjson.go
+```
 
 ## Usage
 
