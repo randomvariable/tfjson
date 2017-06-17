@@ -56,6 +56,9 @@ func tfjson(planfile string) (string, error) {
 
 	plan, err := terraform.ReadPlan(f)
 	if err != nil {
+		fmt.Printf("error: %s   \n", err)
+		fmt.Printf("plan: %s   \n", plan)
+		fmt.Println("asdfasdfasdfasfasfasfas")
 		return "", err
 	}
 
@@ -66,6 +69,7 @@ func tfjson(planfile string) (string, error) {
 
 	j, err := json.MarshalIndent(diff, "", "    ")
 	if err != nil {
+		fmt.Println("error marshalling")
 		return "", err
 	}
 
