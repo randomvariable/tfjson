@@ -1,6 +1,10 @@
 tfjson
 ======
 
+## NOTE: 
+This is a classpass fork of TFJSON for the purpose of terrafom version used in the original. [Palantir](https://github.com/palantir/tfjson) is on terraform 0.7.7 to our 0.8.8
+Once palantir gets their issue with https://github.com/palantir/tfjson/pull/4 sorted, then we can migrate back to trunk
+
 Utility to read in a Terraform plan file and dump it out in JSON. Standalone
 version of [Terraform PR #3170](https://github.com/hashicorp/terraform/pull/3170).
 
@@ -8,6 +12,16 @@ version of [Terraform PR #3170](https://github.com/hashicorp/terraform/pull/3170
 
 ```
 $ go get github.com/palantir/tfjson
+```
+
+## Building
+### For linux:
+```
+GOOS=linux GOARCH=amd64 go build -v tfjson.go
+```
+### For mac:
+```
+GOOS=darwin GOARCH=amd64 go build -v tfjson.go
 ```
 
 ## Usage
